@@ -8,8 +8,9 @@ sudo apt-get update &&
   sudo apt-get install git -y &&
   sudo git config --global user.email "none@none.none" &&
   sudo git config --global user.name "None" &&
-  
+
   # Install Nginx and MySQL server;
+  # @todo: Install nginx with specific version 1.4.6
   sudo apt-get install nginx -y &&
   sudo apt-get install mysql-server -y &&
 
