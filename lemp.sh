@@ -9,7 +9,6 @@ sudo apt-get update &&
   sudo mysql_secure_installation &&
   sudo apt-get install php5-fpm php5-mysql -y &&
   sudo sed -i -e 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php5/fpm/php.ini &&
-  sudo rm /etc/php5/fpm/php.ini-e &&
   mkdir /var/www &&
   mkdir /var/www/default &&
   mkdir /var/www/default/html &&
