@@ -54,4 +54,9 @@ sudo apt-get update &&
   sudo sed -i -e '/fastcgi_params;/a \\t}' /etc/nginx/sites-available/default &&
 
   # Restart Nginx;
-  sudo service nginx restart
+  sudo service nginx restart &&
+
+  # Install PHPMyAdmin;
+  sudo apt-get install phpmyadmin -y &&
+  sudo php5enmod mcrypt &&
+  sudo service php5-fpm restart
