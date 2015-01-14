@@ -28,6 +28,8 @@ sudo apt-get update &&
   mkdir /var/www &&
   mkdir /var/www/default &&
   mkdir /var/www/default/html &&
+  sudo cp /usr/share/nginx/html/index.html /var/www/default/html/ &&
+  sudo sed -i -e '/Thank you for using nginx./a <p>This server has been configured using <a href="https://github.com/timhtheos/lemp">this script</a>.</p>' /var/www/default/html/index.html &&
 
   # Versionize the Server Blocks (equivalent to Apache2's Virtual Host);
   sudo git init /etc/nginx/sites-available/ &&
