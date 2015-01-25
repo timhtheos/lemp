@@ -55,6 +55,12 @@ sudo apt-get update &&
   sudo sed -i -e '/fastcgi_params;/{n;d}' /etc/nginx/sites-available/default &&
   sudo sed -i -e '/fastcgi_params;/a \\t}' /etc/nginx/sites-available/default &&
 
+  # Backup sites-available
+  cd /etc/nginx/sites-available/ &&
+  sudo git add . &&
+  sudo git commit -m "Configure default server block;" &&
+  cd ~ &&
+
   # Restart Nginx;
   sudo service nginx restart &&
 
